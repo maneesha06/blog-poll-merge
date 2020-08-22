@@ -1,5 +1,23 @@
 li a {
+	color: blue;
+}
+
+h1 {
+	color: black;
+	font-family: arial;
+	text-align: center;
+	font-size: 500%;
+	margin-top: 3% 
+}
+
+h2 {
 	color: green;
+	font-family: arial;
+	font-size: 300%;
+	text-indent: 50px;
+	margin-left: 5%;
+
+	
 }
 
 body {

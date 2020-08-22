@@ -1,12 +1,17 @@
-<h1>{{ question.question_text }}</h1>
+<h1 style="font-family: arial;text-align: center; margin-top: 5%; font-size: 300%">{{ question.question_text }}</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
+<div class="bg-img">
 {% csrf_token %}
 {% for choice in question.choice_set.all %}
+	<h2 style="font-family: arial; margin-left: 5%; font-size: 200%">
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+    </h2>
 {% endfor %}
+<h2 style="font-family: arial; margin-left: 5%; font-size: 400%">
 <input type="submit" value="Vote">
+</h2>
 </form>

@@ -1,9 +1,14 @@
-<h1>{{ question.question_text }}</h1>
+
+<h1 style="font-family: arial;text-align: center; margin-top: 5%; font-size: 300%">Poll Result</h1>
+
+<h2 style="font-family: arial; margin-left: 5%; font-size: 200%">{{ question.question_text }}</h2>
 
 <ul>
 {% for choice in question.choice_set.all %}
+<h2 style= "font-family: arial; margin-left: 5%; font-size: 200%">
     <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+</h2>
 {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<h1 style="font-family: arial; margin-left: 5%; font-size: 200%"><a href="{% url 'polls:detail' question.id %}">Vote again?</a></h1>
