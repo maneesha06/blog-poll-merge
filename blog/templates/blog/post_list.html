@@ -1,0 +1,11 @@
+<div>
+    <h1 style="text-align: center; margin-top: 5%"><a href="/"> Blog </a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <h2 style="margin-left: 5%"><a href="">{{ post.title }}</a></h2>
+        <p style="margin-left: 5%">{{ post.text|linebreaksbr }}</p>
+        <p style="margin-left: 5%; font-style: italic;">published: {{ post.published_date }}</p>
+    </div>
+{% endfor %}
